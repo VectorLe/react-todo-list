@@ -11,11 +11,6 @@ class MainContent extends React.Component {
         this.handleChange = this.handleChange.bind(this);
     }
 
-    addZero(i) {
-        if (i < 10) i = "0" + i;
-        return i;
-    }
-
     handleChange(id) {
         this.setState(prevState => {
             const updateTasks = prevState.tasks.map(task => {
@@ -32,29 +27,9 @@ class MainContent extends React.Component {
     render () {
         const taskComponents = this.state.tasks.map(item => <ToDoItem key={item.id} task={item} handleChange={this.handleChange}/>);
 
-        const date = new Date();
-        const hour = date.getHours();
-        const minutes = this.addZero(date.getMinutes());
-        let timeOfDay;
-
-        const styles = {};
-        if(hour < 12) {
-            timeOfDay = "morning";
-            styles.color = "yellow";
-        }
-        else if(hour >= 12 && hour <= 17) {
-            timeOfDay = "afternoon";
-            styles.color = "orange";
-        }
-        else {
-            timeOfDay = "night";
-            styles.color = "royalblue";
-        }
-
         return (
             <main>
-                <h2>It is currently {hour % 12}:{minutes}.</h2>
-                <h3 style={styles}>Good {timeOfDay}!</h3>
+                <h1>To-Do List</h1>
                 <ul className="todo-list">
                     {taskComponents}
                 </ul>

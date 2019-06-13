@@ -1,21 +1,22 @@
-body {
-    margin: 0 auto;
+html, body {
+    width: 100%;
+    height: 100%;
     background-color: #000;
     color: #fff;
     font-family: Arial;
     text-rendering: optimizeSpeed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-header {
-    height: 150px;
-    background-color: #333;
-    padding: 20px;
-    font-size: 25px;
+main {
+    width: 70vw;
 }
 
 .todo-list {
-    margin: auto;
-    width: 50%;
+    width: 100%;
+    height: 100%;
     border-radius: 15px;
     background-color: white;
     list-style-type: none;
@@ -37,10 +38,4 @@ input[type=checkbox]:focus {
     outline: 0;
 }
 
-footer {
-    margin-top: 25px;
-    height: 150px;
-    background-color: #333;
-    padding: 20px;
-}
 

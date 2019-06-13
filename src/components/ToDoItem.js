@@ -7,7 +7,7 @@ class ToDoItem extends React.Component {
             textDecoration: "line-through"
         }
         const notDoneStyle = {
-            color: "red",
+            color: "grey",
             fontWeight: "bold"
         }
 
